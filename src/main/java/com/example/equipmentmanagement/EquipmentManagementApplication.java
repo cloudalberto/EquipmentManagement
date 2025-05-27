@@ -266,16 +266,22 @@ public class EquipmentManagementApplication {
 			}
 		};
 	}
-
-	String apiKey = "API_DEL_PROYECTO"; // Reemplaza con tu clave real
-//accede al geolocalizador
-        try {
-		String resultado = Geolocalizador.obtenerUbicacion(apiKey);
-		System.out.println("Respuesta: " + resultado);
-	} catch (IOException e) {
-		System.err.println("Error al obtener la ubicación: " + e.getMessage());
+	// codigo para devolver las coordenadas de el movil
+/*
+	@Bean
+	public CommandLineRunner geolocalizadorRunner() {
+		return args -> {
+			String apiKey = "API_DEL_PROYECTO"; // Reemplaza con tu clave real
+			try {
+				String resultado = Geolocalizador.obtenerUbicacion(apiKey);
+				System.out.println("Respuesta: " + resultado);
+			} catch (IOException e) {
+				System.err.println("Error al obtener la ubicación: " + e.getMessage());
+			}
+		};
 	}
 
+	*/
 }
 
 
